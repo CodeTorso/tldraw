@@ -154,7 +154,11 @@ const canvasBlob = (size: [number, number], fn: (ctx: CanvasRenderingContext2D) 
 	fn(ctx)
 	return canvas.toDataURL()
 }
-type PatternDef = { zoom: number; url: string; darkMode: boolean }
+interface PatternDef {
+	zoom: number
+	url: string
+	darkMode: boolean
+}
 
 const getDefaultPatterns = () => {
 	const defaultPatterns: PatternDef[] = []
